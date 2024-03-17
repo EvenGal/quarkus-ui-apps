@@ -1,4 +1,4 @@
-name: Weather app CI
+name: Quarkus apps CI
 
 on:
   pull_request:
@@ -20,7 +20,9 @@ jobs:
           java-version: 21
           cache: 'maven'
 
-      - name: Build and test using Maven wrapper
-        run: ./mvnw -B clean package
+      - name: Build and test weather-app
+        run: |
+          cd weather-app
+          ./mvnw -B clean package
 
 
