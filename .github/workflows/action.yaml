@@ -28,6 +28,6 @@ jobs:
       - name: Build docker image
         run: |
           cd weather-app
-          docker build -t weather-app:${{ github.sha }}
+          docker build -t weather-app:${{ github.sha }} .
 
 
