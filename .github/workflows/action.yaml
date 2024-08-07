@@ -25,4 +25,9 @@ jobs:
           cd weather-app
           ./mvnw -B clean package
 
+      - name: Build docker image
+        run: |
+          cd weather-app
+          docker build -t weather-app:${{ github.sha }}
+
 
